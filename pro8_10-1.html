@@ -9,11 +9,12 @@
             let Div = document.createElement("div")
             Div.innerHTML = text;
             obj.parentElement.appendChild(Div)
-            Div.addEventListener("click",
-                function () {
-                    this.parentElement.removeChild(Div)
-                }
-            )
+
+            Div.onclick(change(this))
+        }
+        function change(me) {
+            me.parentElement.removeChild(me)
+
         }
     </script>
 </head>
