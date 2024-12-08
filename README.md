@@ -33,4 +33,14 @@
 ### 8. week8
 - 중간고사
 
-### 9. week9
+### 9. [week9](https://github.com/tspark0724/webP/tree/main/week9)
+- 웹 스토리지(세션, 로컬), 쿠키 활용 공부
+- Apache24 활용
+
+### 10. [week10](https://github.com/tspark0724/webP/tree/main/week10)
+- audio, video 제어 방법
+- geolocation(위치정보 서비스), 웹 워커 정의 및 동작 방식
+
+### 11. week11
+
+### 12. week12
