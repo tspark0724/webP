@@ -19,12 +19,12 @@
 5. week5
 - Dom 요소 선택 및 조작 
 - Dom 요소 조작을 응용한 동적 웹페이지 작성
-- 과제 practice8-10.html
+- 과제 [practice8-10.html](https://github.com/tspark0724/webP/blob/main/practice8-10_1.html),[practice8-10_2.html](https://github.com/tspark0724/webP/blob/main/practice8-10_2.html)
 
 6. week6
 - 이벤트 정의, 기본 복습
 - 이벤트 핸들링 공부(HTML속성, DOM, addEventListener())
-- 과제 practice9-6.html, practice9-10.html
+- 과제 [practice9-6.html](https://github.com/tspark0724/webP/blob/main/practice9-6.html), [practice9-10.html](https://github.com/tspark0724/webP/blob/main/practice9-10.html)
 
 7. week7
 - BOM 객체 활용 (브라우저 창과 페이지 제어 및 정보 처리)
