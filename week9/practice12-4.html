@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기 쓰기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function showWritePage() {
+            document.getElementById("writePage").classList.remove("hidden");
+            document.getElementById("viewPage").classList.add("hidden");
+        }
+
+        function showViewPage() {
+            document.getElementById("writePage").classList.add("hidden");
+            document.getElementById("viewPage").classList.remove("hidden");
+            display();
+        }
+
+        function store() {
+            const content = document.getElementById("content").value;
+            
+            // 공백만 입력된 경우 확인
+            if (!content || content.replace(/\s/g, '') === '') {
+                alert("내용을 입력해주세요!");
+                return;
+            }
+
+            const today = new Date().toISOString().split("T")[0]; // yyyy-mm-dd 형식
+            localStorage.setItem(today, content);
+            alert("일기가 저장되었습니다!");
+            document.getElementById("content").value = "";
+        }
+
+        function display() {
+            const table = document.getElementById("diaryTable");
+            table.innerHTML = ""; // 기존 데이터 초기화
+
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i); // 날짜(key)
+                const value = localStorage.getItem(key); // 내용(value)
+
+                const row = document.createElement("tr");
+                const dateCell = document.createElement("td");
+                const contentCell = document.createElement("td");
+
+                dateCell.textContent = key;
+                contentCell.textContent = value;
+
+                row.appendChild(dateCell);
+                row.appendChild(contentCell);
+                table.appendChild(row);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="writePage">
+        <h2>일기 쓰기</h2>
+        <p>오늘: <span id="todayDate"></span></p>
+        <textarea id="content" placeholder="오늘의 일기를 작성하세요."></textarea>
+        <br>
+        <button onclick="store();">저장</button>
+        <button onclick="showViewPage()">보기</button>
+    </div>
+
+    <div id="viewPage" class="hidden">
+        <h2>저장된 일기</h2>
+        <table id="diaryTable"></table>
+        <br>
+        <button onclick="showWritePage()">돌아가기</button>
+    </div>
+
+    <script>
+        // 오늘 날짜 표시
+        document.getElementById("todayDate").textContent = new Date().toISOString().split("T")[0];
+    </script>
+</body>
+</html>
