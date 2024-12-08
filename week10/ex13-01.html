@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오와 비디오 내장하기</title>
+    <script>
+        function play(){
+            let audio=document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+</head>
+
+<body>
+    <h3>오디오와 비디오 내장하기</h3>
+    <hr>
+    <audio id="audio" src="./alarm.mp3" loop controls>웹브라우저가 audio태그를 지원하지 않음</audio>
+    <hr>
+    <video id="video" width="300" height="200" src="./apt.mp4" type="video/mp4" controls>
+        웹브라우저가 video 태그를 지원하지 않음
+    </video>
+    <button onclick="play();">Music play</button>
+</body>
+
+</html>

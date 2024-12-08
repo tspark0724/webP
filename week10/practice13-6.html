@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>워커 테스크 만들기</title>
+    <script>
+        let addWorker=new Worker("13-6.js");
+
+        function calc(){
+            let parameters={
+                a: document.getElementById("a").value,
+                b: document.getElementById("b").value
+            };
+            addWorker.postMessage(parameters);
+        }
+        addWorker.onmessage=function(e){
+            document.getElementById('result').value=e.data;
+        }
+    </script>
+</head>
+<body>
+    <h2>곱셈하기</h2>
+    <hr>
+    <input type="text" id="a"> X <input type="text" id="b">
+    <button id="mul" onclick="calc();">곱하기</button>
+    <input type="text" id="result">
+</body>
+</html>
