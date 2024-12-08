@@ -41,6 +41,20 @@
 - audio, video 제어 방법
 - geolocation(위치정보 서비스), 웹 워커 정의 및 동작 방식
 
-### 11. week11
+### 11. [week11](https://github.com/tspark0724/webP/tree/main/week11)
+- 데이터 타입과 데이터 복사 및 객체 복사, ES6d의 주요기능 활용
+- 변수 선언 방식, hoisting, JavaScript디버깅 수행
 
-### 12. week12
+
+### 12. [week12](https://github.com/tspark0724/webP/tree/main/week12)
+- JavaScript 함수의 기본과 활용, 프로그래밍 개념
+- scope, closure 개념과 활용
+- 함수형 프로그래밍 실습 [funcPr-practice.js](https://github.com/tspark0724/webP/blob/main/week12/funcPr-practice.js)
+
+### 13. [week13](https://github.com/tspark0724/webP/tree/main/week13)
+- Nodejs의 기본 개념과 특징
+- Nodejs 기능 활용 및 웹 서버 생성
+
+### 14. [week14](https://github.com/tspark0724/webP/tree/main/week14)
+- Express.js 사용, 요청 및 응답 객체 구조 공부
+- 미들웨어 및 라우터 활용
